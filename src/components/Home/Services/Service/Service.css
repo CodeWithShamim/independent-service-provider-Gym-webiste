@@ -2,6 +2,18 @@
     position: relative;
 }
 
+.service-container span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    z-index: 2;
+    font-size: 1rem;
+    transition: 0.3s;
+    font-family: "Times New Roman", Times, serif;
+    background-color: rgba(0, 0, 0, 0.47);
+}
+
 .service-img {
     position: absolute;
     bottom: 0;
@@ -26,4 +38,8 @@
 
 .service-container:hover .service-img {
     transform: translateY(-100%) rotateX(90deg);
+}
+
+.service-container:hover span {
+    display: none;
 }
