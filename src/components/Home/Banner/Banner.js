@@ -14,7 +14,7 @@ const Banner = () => {
 
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item className="carousel-bg">
+      <Carousel.Item className="carousel-bg1">
         <div className="d-flex align-items-center flex-column justify-content-center">
           <div
             data-aos="slide-right"
@@ -36,7 +36,7 @@ const Banner = () => {
         </div>
       </Carousel.Item>
 
-      <Carousel.Item className="carousel-bg">
+      <Carousel.Item className="carousel-bg2">
         <div className="d-flex align-items-center flex-column justify-content-center">
           <div>
             <img className="img-fluid" src={img2} alt="First slide" />
@@ -49,7 +49,7 @@ const Banner = () => {
         </div>
       </Carousel.Item>
 
-      <Carousel.Item className="carousel-bg">
+      <Carousel.Item className="carousel-bg3">
         <div className="d-flex align-items-center flex-column justify-content-center">
           <div>
             <img className="img-fluid" src={img3} alt="First slide" />

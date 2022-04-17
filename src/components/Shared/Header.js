@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div>
+    <>
       <Navbar
-        className="py-3"
+        sticky="top"
+        className="py-4"
         collapseOnSelect
         expand="lg"
         bg="dark"
@@ -39,7 +40,7 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </div>
+    </>
   );
 };
 
