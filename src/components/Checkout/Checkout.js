@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 const Checkout = () => {
   const { checkoutId } = useParams();
   return (
-    <div>
+    <div style={{ minHeight: "calc(100vh - 90px)" }}>
       <h1>this is Checkout: {checkoutId}</h1>
     </div>
   );
