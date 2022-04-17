@@ -1,0 +1,7 @@
+.notfound-container {
+    background: url("../../../images/NotFound.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+}
