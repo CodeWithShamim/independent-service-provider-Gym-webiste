@@ -4,7 +4,7 @@
 }
 
 .carousel-bg2 {
-    background: url("../../../images/bg.png"), linear-gradient( 90deg, rgb(88, 73, 129) 0%, rgb(20, 20, 53) 35%, rgb(111, 19, 114) 100%);
+    background: linear-gradient( rgba(88, 73, 129, 0.589) 0%, rgba(20, 20, 53, 0.733) 35%, rgba(28, 5, 29, 0.61) 98%), url("../../../images/bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
