@@ -1,5 +1,37 @@
+.main-container {
+    background: url("../../../images/service-bg.jpg");
+    opacity: 90%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
 .services-container {
+    width: 98%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
+}
+
+.title-effect {
+    width: 100%;
+    height: 5px;
+    background: #16bffd;
+    border-radius: 50px;
+    background: -webkit-linear-gradient(to right, #cb3066, #16bffd);
+    background: linear-gradient(to right, #cb3066, #16bffd);
+}
+
+@media only screen and (max-width: 576px) {
+    .services-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
