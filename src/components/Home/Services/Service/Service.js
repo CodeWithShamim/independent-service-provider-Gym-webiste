@@ -6,10 +6,17 @@ const Service = ({ service }) => {
   return (
     <div className="service-container">
       <img className="img-fluid" src={img} alt="service-img" />
-      <h4>{name}</h4>
-      <p>{description}</p>
-      <h6>{price}</h6>
-      <button className="btn btn-dark">Check out</button>
+      <div
+        data-aos="zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        className="hover-item"
+      >
+        <h4>{name}</h4>
+        <p>{description}</p>
+        <h6>{price}</h6>
+        <button className="checkout-btn btn btn-dark">Check out</button>
+      </div>
     </div>
   );
 };
