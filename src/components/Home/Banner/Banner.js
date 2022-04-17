@@ -16,11 +16,20 @@ const Banner = () => {
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item className="carousel-bg">
         <div className="d-flex align-items-center flex-column justify-content-center">
-          <div>
+          <div
+            data-aos="slide-right"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+          >
             <img className="img-fluid" src={img1} alt="First slide" />
           </div>
 
-          <div className="text-light">
+          <div
+            className="text-light"
+            data-aos="slide-left"
+            data-aos-easing="linear"
+            data-aos-duration="800"
+          >
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </div>
