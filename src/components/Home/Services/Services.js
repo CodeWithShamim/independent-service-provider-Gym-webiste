@@ -13,13 +13,13 @@ const Services = () => {
     <div className="main-container">
       <div className="d-flex mx-auto w-75 align-items-center justify-content-center">
         <div className="title-effect"></div>
-        <h2
+        <h1
           data-aos="fade-right"
           data-aos-duration="500"
-          className="pt-5 text-info w-50"
+          className="pt-5 text-light w-50"
         >
           MY SERVICE
-        </h2>
+        </h1>
         <div className="title-effect"></div>
       </div>
 
