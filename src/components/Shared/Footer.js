@@ -1,6 +1,8 @@
 import React from "react";
 
 const Footer = () => {
+  const getDate = new Date();
+  const getYear = getDate.getFullYear();
   return (
     <div
       style={{
@@ -8,10 +10,10 @@ const Footer = () => {
         bottom: "0",
         width: "100%",
         height: "60px",
-        background: "green",
+        background: "black",
       }}
     >
-      <p>Copyright &copy; 2022</p>
+      <p className="text-light mt-3">Copyright &copy; {getYear}</p>
     </div>
   );
 };

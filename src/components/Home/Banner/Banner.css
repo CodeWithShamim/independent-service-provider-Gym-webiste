@@ -1,0 +1,6 @@
+.carousel-bg {
+    background: linear-gradient(to right, #333, #333 50%, rgb(87, 67, 67) 100%);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
