@@ -2,7 +2,10 @@ import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import logo from "../../../images/logo2.png";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { toast } from "react-toastify";
 import Loading from "../../Shared/Loading";
@@ -10,8 +13,12 @@ import Loading from "../../Shared/Loading";
 const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending, error2] =
+    useSendPasswordResetEmail(auth);
+
   const emailRef = useRef("");
   const passwordRef = useRef("");
+
   // handle Login
   const handleLogin = (e) => {
     e.preventDefault();
@@ -28,6 +35,7 @@ const Login = () => {
 
   // use Navigate
   const navigate = useNavigate();
+
   // Set Error
   let errorElement;
 
@@ -38,7 +46,25 @@ const Login = () => {
     return <Loading></Loading>;
   }
   if (user) {
+    toast("Successfully login");
     navigate("/");
+  }
+
+  // Reset password
+  const resetPassword = async () => {
+    const resetEmail = emailRef.current.value;
+    if (resetEmail) {
+      await sendPasswordResetEmail(resetEmail);
+      toast("Successfully reset email");
+    } else {
+      toast.error("Plsease add your email address!!");
+    }
+  };
+  if (sending) {
+    return <Loading></Loading>;
+  }
+  if (error2) {
+    errorElement = error2.message;
   }
 
   return (
@@ -90,6 +116,9 @@ const Login = () => {
           </button>
         </form>
         <p className="text-warning">{errorElement}</p>
+        <Link onClick={resetPassword} to="">
+          Forgotten password?
+        </Link>
 
         {/* <Link
           to=""
