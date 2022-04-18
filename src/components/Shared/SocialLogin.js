@@ -40,9 +40,10 @@ const SocialLogin = () => {
   // Error ---------
   let errorItem;
   if (error1 || error2 || error3) {
+    console.log(error1);
     errorItem = (
-      <p>
-        {error1.message} {error2.message} {error3.message}
+      <p className="text-warning">
+        {error1?.message} {error2?.message} {error3?.message}
       </p>
     );
   }
