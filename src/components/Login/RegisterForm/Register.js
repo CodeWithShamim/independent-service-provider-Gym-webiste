@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Register.css";
 import logo from "../../../images/logo2.png";
@@ -8,7 +8,6 @@ import Loading from "../../Shared/Loading";
 import { toast } from "react-toastify";
 
 const RegisterForm = () => {
-  const [registerError, setRegisterError] = useState("");
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const emailRef = useRef();
@@ -35,6 +34,9 @@ const RegisterForm = () => {
 
   // use navigate
   const navigate = useNavigate();
+  // Error element
+  let errorElement;
+
   if (user) {
     navigate("/");
   }
@@ -42,8 +44,9 @@ const RegisterForm = () => {
     return <Loading></Loading>;
   }
   if (error) {
-    setRegisterError(error.message);
+    errorElement = error.message;
   }
+
   return (
     <div className="text-center main-container">
       <div
@@ -108,7 +111,11 @@ const RegisterForm = () => {
             Login
           </button>
         </form>
-        <p>{registerError}</p>
+        <p>
+          {errorElement && (
+            <p className="text-warning">Error: {errorElement}</p>
+          )}
+        </p>
 
         {/* <Link
           to=""
