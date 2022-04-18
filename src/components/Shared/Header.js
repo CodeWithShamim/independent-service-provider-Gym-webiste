@@ -1,13 +1,14 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import logo from "../../images/logo2.png";
 
 const Header = () => {
   return (
     <>
       <Navbar
         sticky="top"
-        className="py-4"
+        style={{ height: "90px" }}
         collapseOnSelect
         expand="lg"
         bg="dark"
@@ -15,7 +16,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand className="fw-bold fs-4" as={Link} to="/">
-            Eyun Fitness
+            <img data-aos="fade-in" className="w-75" src={logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -25,26 +26,30 @@ const Header = () => {
             </Nav>
             <Nav>
               <Link
-                className="text-decoration-none fw-bold text-light me-md-4"
+                style={{ color: "#00BEF2" }}
+                className="text-decoration-none fw-bold me-md-4"
                 to="/"
               >
                 Home
               </Link>
 
               <Link
-                className="text-decoration-none fw-bold text-light me-md-4"
+                style={{ color: "#00BEF2" }}
+                className="text-decoration-none fw-bold me-md-4"
                 to="/blogs"
               >
                 Blogs
               </Link>
               <Link
-                className="text-decoration-none fw-bold text-light me-md-4"
+                style={{ color: "#00BEF2" }}
+                className="text-decoration-none fw-bold me-md-4"
                 to="/about"
               >
                 About
               </Link>
               <Link
-                className="text-decoration-none fw-bold text-light"
+                style={{ color: "#00BEF2" }}
+                className="text-decoration-none fw-bold"
                 to="/login"
               >
                 Login
