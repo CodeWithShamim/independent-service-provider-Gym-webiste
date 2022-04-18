@@ -25,13 +25,22 @@ const Footer = () => {
                 <h3>Services</h3>
                 <ul>
                   <li>
-                    <a href="http://google.com/">Home</a>
-                  </li>
-                  <li>
                     <a href="http://google.com/">Running</a>
                   </li>
                   <li>
-                    <a href="http://google.com/">Practical</a>
+                    <a href="http://google.com/">Bodybuilding</a>
+                  </li>
+                  <li>
+                    <a href="http://google.com/">Stretching</a>
+                  </li>
+                  <li>
+                    <a href="http://google.com/">Boxing</a>
+                  </li>
+                  <li>
+                    <a href="http://google.com/">Swimming</a>
+                  </li>
+                  <li>
+                    <a href="http://google.com/">Dumbbelling</a>
                   </li>
                 </ul>
               </div>
@@ -39,7 +48,7 @@ const Footer = () => {
                 <h3>About</h3>
                 <ul>
                   <li>
-                    <a href="http://google.com/">About me</a>
+                    <a href="https://github.com/CodeWithShamim/">About me</a>
                   </li>
                   <li>
                     <a href="http://google.com/">My working process</a>

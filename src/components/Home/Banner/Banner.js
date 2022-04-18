@@ -25,13 +25,16 @@ const Banner = () => {
           </div>
 
           <div
-            className="text-light"
+            className="text-light ms-0 ms-md-5"
             data-aos="slide-left"
             data-aos-easing="linear"
             data-aos-duration="800"
           >
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h1 className="text-info">Welcome To Eyun Fitness</h1>
+            <p>
+              Want to be healthy and have a perfect body? <br /> Eyun Fitness is
+              the right decision for you!.
+            </p>
           </div>
         </div>
       </Carousel.Item>
@@ -43,8 +46,12 @@ const Banner = () => {
           </div>
 
           <div className="text-light">
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h1 className="text-warning">Start Your Fitness Journey</h1>
+            <p>
+              {" "}
+              Never say the sky’s the limit when there are footprints on the
+              moon
+            </p>
           </div>
         </div>
       </Carousel.Item>
@@ -56,8 +63,8 @@ const Banner = () => {
           </div>
 
           <div className="text-light">
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h1 className="text-danger">Build A Perfect Health Growth</h1>
+            <p>A winner never whines</p>
           </div>
         </div>
       </Carousel.Item>

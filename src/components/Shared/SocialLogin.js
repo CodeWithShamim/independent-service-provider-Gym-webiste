@@ -9,7 +9,8 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import Loading from "./Loading";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const SocialLogin = () => {
   const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
@@ -18,6 +19,7 @@ const SocialLogin = () => {
     useSignInWithFacebook(auth);
   // use navigate
   const navigate = useNavigate();
+  const location = useLocation();
 
   // ==========Google sign in ==================
   const handleGoogleSignIn = () => {
@@ -49,8 +51,10 @@ const SocialLogin = () => {
   }
 
   // getUser-------
+  let from = location.state?.from?.pathname || "/";
   if (user1 || user2 || user3) {
-    navigate("/");
+    toast("Successfully login");
+    navigate(from, { replace: true });
   }
 
   return (

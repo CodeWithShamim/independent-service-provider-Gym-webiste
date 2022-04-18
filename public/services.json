@@ -5,43 +5,43 @@
 
         "id": "625be0a6ccc4a4f457f732f4",
         "img": "https://i.ibb.co/jG0ys2N/blog2.jpg",
-        "name": "Agnes Lawrence",
-        "description": "Aliqua amet enim non excepteur qui. Consectetur enim exercitation aliqua in fugiat excepteur amet cillum culpa deserunt velit.\r\n",
+        "name": "Running",
+        "description": "Training for running events by running, as you’d probably expect, is a very good idea. It’s pretty much a necessity in fact, if you want to maintain, improve and progress. However, there’s a lot more you can do.\r\n",
         "price": "$2,902.63"
     },
     {
         "id": "625be0a65b1b8fd094f665a3",
-        "img": "https://i.ibb.co/02yBSqV/service1.jpg",
-        "name": "Florence Chavez",
-        "description": "Aliqua amet enim non excepteur qui. Consectetur enim exercitation aliqua in fugiat excepteur amet cillum culpa deserunt velit.\r\n",
-        "price": "$1,632.94"
+        "img": "https://i.ibb.co/xG2w2wg/service5.jpg",
+        "name": "Bodybuilding",
+        "description": "Bodybuilding is the use of progressive resistance exercise to control and develop one's muscles by muscle hypertrophy for aesthetic purposes. It is distinct from similar activities such as powerlifting.\r\n",
+        "price": "$632.94"
     },
     {
         "id": "625be0a61dceb677143b168d",
-        "img": "https://i.ibb.co/QJFznY5/service2.jpg",
-        "name": "Latonya Leon",
-        "description": "Aliqua amet enim non excepteur qui. Consectetur enim exercitation aliqua in fugiat excepteur amet cillum culpa deserunt velit.\r\n",
-        "price": "$3,512.72"
+        "img": "https://i.ibb.co/PDPj7nC/Stretching.jpg",
+        "name": "Stretching",
+        "description": "Stretching prior to exercise helps to reduce the risk of injury. Post-workout stretches, also known as maintenance stretches, help to move lactic acid out of your muscles and decrease.\r\n",
+        "price": "$512.72"
     },
     {
         "id": "625be0a6061fff41d547aa73",
-        "img": "https://i.ibb.co/3TFzMr1/service3.jpg",
-        "name": "Moreno Marshall",
-        "description": "Aliqua amet enim non excepteur qui. Consectetur enim exercitation aliqua in fugiat excepteur amet cillum culpa deserunt velit.\r\n",
-        "price": "$2,910.55"
+        "img": "https://i.ibb.co/wCWmmHy/boxing.jpg",
+        "name": "Boxing",
+        "description": "Boxing is a combat sport that has been practiced since before the time of ancient Greece and the original Olympics. It has been used to train people for performance in the art of striking.\r\n",
+        "price": "$910.55"
     },
     {
         "id": "625be0a665c5e3ce53b7f62d",
-        "img": "https://i.ibb.co/G0wtTBg/service4.jpg",
-        "name": "Carrillo Lester",
-        "description": "Aliqua amet enim non excepteur qui. Consectetur enim exercitation aliqua in fugiat excepteur amet cillum culpa deserunt velit.\r\n",
-        "price": "$2,499.37"
+        "img": "https://i.ibb.co/NtxDw9D/swiming.jpg",
+        "name": "Swimming",
+        "description": "Swimming is a very satisfying form of exercise. As well as giving you a low-resistance, full body workout, you can instantly start to see benefits of your sessions in the pool – everything starts .\r\n",
+        "price": "$499.37"
     },
     {
         "id": "625be0a6cae9a87176219388",
-        "img": "https://i.ibb.co/xG2w2wg/service5.jpg",
-        "name": "Katharine Merritt",
-        "description": "Aliqua amet enim non excepteur qui. Consectetur enim exercitation aliqua in fugiat excepteur amet cillum culpa deserunt velit.\r\n",
-        "price": "$1,399.17"
+        "img": "https://i.ibb.co/n6th0xG/Dumbbelling.jpg",
+        "name": "Dumbbelling",
+        "description": "Choose a weight that makes your muscles tired by the time you reach 12-15 repetitions. Doing just one set of that may give you similar muscle-building benefits and others to doing three sets total.\r\n",
+        "price": "$399.17"
     }
 ]
