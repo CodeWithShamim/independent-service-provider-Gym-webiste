@@ -12,6 +12,9 @@ import Blogs from "./components/Blogs/Blogs";
 import NotFound from "./components/Shared/NotFound/NotFound";
 import Login from "./components/Login/LoginForm/Login";
 import Register from "./components/Login/RegisterForm/Register";
+// Tostify --------------
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   AOS.init();
@@ -31,6 +34,7 @@ function App() {
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }

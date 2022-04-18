@@ -1,12 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Register.css";
 import logo from "../../../images/logo2.png";
 import auth from "../../../firebase.init";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import Loading from "../../Shared/Loading";
+import { toast } from "react-toastify";
 
 const RegisterForm = () => {
+  const [registerError, setRegisterError] = useState("");
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const emailRef = useRef();
@@ -27,7 +29,7 @@ const RegisterForm = () => {
     if (name && email && password) {
       createUserWithEmailAndPassword(email, password);
     } else {
-      console.log("Please fiil all input field!!");
+      toast("Please fiil all input field!!");
     }
   };
 
@@ -38,6 +40,9 @@ const RegisterForm = () => {
   }
   if (loading) {
     return <Loading></Loading>;
+  }
+  if (error) {
+    setRegisterError(error.message);
   }
   return (
     <div className="text-center main-container">
@@ -103,6 +108,7 @@ const RegisterForm = () => {
             Login
           </button>
         </form>
+        <p>{registerError}</p>
 
         {/* <Link
           to=""
