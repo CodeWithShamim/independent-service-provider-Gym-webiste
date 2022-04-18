@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "../../images/logo2.png";
+// import logo from "../../images/logo2.png";
 
 const Header = () => {
   return (
@@ -16,7 +16,8 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand className="fw-bold fs-4" as={Link} to="/">
-            <img data-aos="fade-in" className="w-75" src={logo} alt="Logo" />
+            {/* <img data-aos="fade-in" className="w-75" src={logo} alt="Logo" /> */}
+            Eyun Fitness
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

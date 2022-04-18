@@ -1,18 +1,20 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import "./Login.css";
+import "./Register.css";
 import logo from "../../../images/logo2.png";
 
-const Login = () => {
+const RegisterForm = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
-  // handle Login
-  const handleLogin = (e) => {
+  const nameRef = useRef("");
+  // handle Registration
+  const handleRegister = (e) => {
     e.preventDefault();
     // get input value
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    console.log(email, password);
+    const name = nameRef.current.value;
+    console.log(email, password, name);
   };
   return (
     <div className="text-center main-container">
@@ -24,8 +26,21 @@ const Login = () => {
       >
         <img className="logo" src={logo} alt="logo" />
         <br />
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleRegister}>
           <div className=" text-start">
+            <div className="mb-3">
+              <label htmlFor="exampleInputName" className="form-label">
+                Name
+              </label>
+              <input
+                ref={nameRef}
+                type="text"
+                className="form-control"
+                id="exampleInputName"
+                aria-describedby="nameHelp"
+              />
+            </div>
+
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">
                 Email
@@ -39,6 +54,7 @@ const Login = () => {
                 required
               />
             </div>
+
             <div className="mb-3">
               <label htmlFor="exampleInputPassword1" className="form-label">
                 Password
@@ -53,9 +69,9 @@ const Login = () => {
             </div>
 
             <p className="signup ">
-              Don't have an account?{" "}
-              <Link to="/signup" className="text-warning">
-                sign up
+              Already have an account?{" "}
+              <Link to="/login" className="text-warning">
+                Login
               </Link>
             </p>
           </div>
@@ -77,4 +93,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default RegisterForm;

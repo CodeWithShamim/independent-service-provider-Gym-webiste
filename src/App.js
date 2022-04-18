@@ -11,7 +11,7 @@ import About from "./components/About/About";
 import Blogs from "./components/Blogs/Blogs";
 import NotFound from "./components/Shared/NotFound/NotFound";
 import Login from "./components/Login/LoginForm/Login";
-import RegisterForm from "./components/Login/RegisterForm/RegisterForm";
+import Register from "./components/Login/RegisterForm/Register";
 
 function App() {
   AOS.init();
@@ -27,7 +27,7 @@ function App() {
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/signup" element={<RegisterForm></RegisterForm>}></Route>
+        <Route path="/signup" element={<Register></Register>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
