@@ -28,7 +28,7 @@ const RegisterForm = () => {
     if (name && email && password) {
       createUserWithEmailAndPassword(email, password);
     } else {
-      toast("Please fiil all input field!!");
+      toast.warn("Please fiil all input field!!");
     }
   };
 
@@ -38,6 +38,9 @@ const RegisterForm = () => {
   let errorElement;
 
   if (user) {
+    toast("Congratulation, Now check your email for verification!!", {
+      icon: "🚀",
+    });
     navigate("/");
   }
   if (loading) {

@@ -1,9 +1,15 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import logo from "../../../images/logo2.png";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
+import { toast } from "react-toastify";
+import Loading from "../../Shared/Loading";
 
 const Login = () => {
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
   const emailRef = useRef("");
   const passwordRef = useRef("");
   // handle Login
@@ -12,8 +18,29 @@ const Login = () => {
     // get input value
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    console.log(email, password);
+    // console.log(email, password);
+    if (email && password) {
+      signInWithEmailAndPassword(email, password);
+    } else {
+      toast.warn("Please fiil all input field!!");
+    }
   };
+
+  // use Navigate
+  const navigate = useNavigate();
+  // Set Error
+  let errorElement;
+
+  if (error) {
+    errorElement = error.message;
+  }
+  if (loading) {
+    return <Loading></Loading>;
+  }
+  if (user) {
+    navigate("/");
+  }
+
   return (
     <div className="text-center main-login-container">
       <div
@@ -36,7 +63,6 @@ const Login = () => {
                 className="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
-                required
               />
             </div>
             <div className="mb-3">
@@ -48,7 +74,6 @@ const Login = () => {
                 type="password"
                 className="form-control"
                 id="exampleInputPassword1"
-                required
               />
             </div>
 
@@ -64,6 +89,7 @@ const Login = () => {
             Login
           </button>
         </form>
+        <p className="text-warning">{errorElement}</p>
 
         {/* <Link
           to=""
