@@ -37,23 +37,20 @@ const Header = () => {
             </Nav>
             <Nav>
               <Link
-                style={{ color: "#00BEF2" }}
-                className="text-decoration-none fw-bold me-md-4"
+                className="text-decoration-none fw-bold me-md-4 text-light"
                 to="/"
               >
                 Home
               </Link>
 
               <Link
-                style={{ color: "#00BEF2" }}
-                className="text-decoration-none fw-bold me-md-4"
+                className="text-decoration-none fw-bold me-md-4 text-light"
                 to="/blogs"
               >
                 Blogs
               </Link>
               <Link
-                style={{ color: "#00BEF2" }}
-                className="text-decoration-none fw-bold me-md-4"
+                className="text-decoration-none fw-bold me-md-4 text-light"
                 to="/about"
               >
                 About
@@ -62,8 +59,7 @@ const Header = () => {
               {/* set dynamic taggle  */}
               {user ? (
                 <Link
-                  style={{ color: "#00BEF2" }}
-                  className="text-decoration-none fw-bold"
+                  className="text-decoration-none fw-bold text-light"
                   to=""
                   onClick={logOut}
                 >
@@ -71,8 +67,7 @@ const Header = () => {
                 </Link>
               ) : (
                 <Link
-                  style={{ color: "#00BEF2" }}
-                  className="text-decoration-none fw-bold"
+                  className="text-decoration-none fw-bold text-light"
                   to="/login"
                 >
                   Login

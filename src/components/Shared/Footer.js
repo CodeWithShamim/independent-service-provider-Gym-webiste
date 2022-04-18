@@ -52,7 +52,7 @@ const Footer = () => {
               <div class="col-md-6 item text">
                 <h3>Eyun Fitness</h3>
                 <p>
-                  Hello, this is eyun and welcome to eyun fitnees. this website
+                  Hello, this is eyun and welcome to eyun fitness. this website
                   only independent service provider.
                 </p>
               </div>
