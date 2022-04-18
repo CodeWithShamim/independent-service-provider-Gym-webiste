@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import logo from "../../../images/logo2.png";
 import {
@@ -35,6 +35,8 @@ const Login = () => {
 
   // use Navigate
   const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
 
   // Set Error
   let errorElement;
@@ -47,7 +49,7 @@ const Login = () => {
   }
   if (user) {
     toast("Successfully login");
-    navigate("/");
+    navigate(from, { replace: true });
   }
 
   // Reset password

@@ -15,6 +15,7 @@ import Register from "./components/Login/RegisterForm/Register";
 // Tostify --------------
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import RequireAuth from "./components/Shared/RequireAuth";
 
 function App() {
   AOS.init();
@@ -25,7 +26,11 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route
           path="/checkout/:checkoutId"
-          element={<Checkout></Checkout>}
+          element={
+            <RequireAuth>
+              <Checkout></Checkout>
+            </RequireAuth>
+          }
         ></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
