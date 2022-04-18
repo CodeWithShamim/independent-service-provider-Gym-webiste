@@ -1,21 +1,21 @@
 [{
 
-
-
-
-        "id": "625be0a6ccc4a4f457f732f4",
-        "img": "https://i.ibb.co/jG0ys2N/blog2.jpg",
-        "name": "Running",
-        "description": "Training for running events by running, as you’d probably expect, is a very good idea. It’s pretty much a necessity in fact, if you want to maintain, improve and progress. However, there’s a lot more you can do.\r\n",
-        "price": "$2,902.63"
-    },
-    {
         "id": "625be0a65b1b8fd094f665a3",
         "img": "https://i.ibb.co/xG2w2wg/service5.jpg",
         "name": "Bodybuilding",
         "description": "Bodybuilding is the use of progressive resistance exercise to control and develop one's muscles by muscle hypertrophy for aesthetic purposes. It is distinct from similar activities such as powerlifting.\r\n",
         "price": "$632.94"
+
     },
+
+    {
+        "id": "625be0a665c5e3ce53b7f62d",
+        "img": "https://i.ibb.co/NtxDw9D/swiming.jpg",
+        "name": "Swimming",
+        "description": "Swimming is a very satisfying form of exercise. As well as giving you a low-resistance, full body workout, you can instantly start to see benefits of your sessions in the pool – everything starts .\r\n",
+        "price": "$499.37"
+    },
+
     {
         "id": "625be0a61dceb677143b168d",
         "img": "https://i.ibb.co/PDPj7nC/Stretching.jpg",
@@ -31,11 +31,13 @@
         "price": "$910.55"
     },
     {
-        "id": "625be0a665c5e3ce53b7f62d",
-        "img": "https://i.ibb.co/NtxDw9D/swiming.jpg",
-        "name": "Swimming",
-        "description": "Swimming is a very satisfying form of exercise. As well as giving you a low-resistance, full body workout, you can instantly start to see benefits of your sessions in the pool – everything starts .\r\n",
-        "price": "$499.37"
+        "id": "625be0a6ccc4a4f457f732f4",
+        "img": "https://i.ibb.co/jG0ys2N/blog2.jpg",
+        "name": "Running",
+        "description": "Training for running events by running, as you’d probably expect, is a very good idea. It’s pretty much a necessity in fact, if you want to maintain, improve and progress. However, there’s a lot more you can do.\r\n",
+        "price": "$2,902.63"
+
+
     },
     {
         "id": "625be0a6cae9a87176219388",
