@@ -9,16 +9,16 @@ const Blogs = () => {
     >
       {/* --------------------question 1------------------------- */}
       <div>
-        <h2>Difference between authorization and authentication?</h2>
+        <h2>Difference between authorization and authentication??</h2>
         <p>
           Authentication and authorization are the two words used in the
           security world. They might sound similar but are completely different
-          from each other. Authentication is used to authenticate someone's
-          identity, whereas authorization is a way to provide permission to
+          from each others. Authentication is used to authenticate someone's
+          identity, whereas authorization is way to provide permission to
           someone to access a particular resource. Simply put, authentication is
           the process of verifying who someone is, whereas authorization is the
-          process of verifying what specific applications, files, and data a
-          user has access to.
+          process of verify what specific applications, files, and data a user
+          has access to.
         </p>
       </div>
 

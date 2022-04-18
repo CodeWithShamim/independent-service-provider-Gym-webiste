@@ -92,6 +92,7 @@ const Login = () => {
                 className="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
+                required
               />
             </div>
             <div className="mb-3">
@@ -103,6 +104,7 @@ const Login = () => {
                 type="password"
                 className="form-control"
                 id="exampleInputPassword1"
+                required
               />
             </div>
 
