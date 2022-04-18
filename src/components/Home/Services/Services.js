@@ -31,11 +31,11 @@ const Services = () => {
       </div>
 
       {/* extra section  */}
-      <div className="container mt-5 d-flex justify-content-between align-items-center flex-column flex-md-row">
-        <img className="img-fluid" src={img} alt="" />
+      <div className="container mt-5 d-flex justify-content-around align-items-center flex-column flex-md-row">
+        <img className="img-fluid extra-section-img" src={img} alt="" />
         <div>
           <h2 className="my-4">Work from home!!</h2>
-          <p>
+          <p className="mx-4">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat,
             iure. Provident dolorum repellat quia explicabo molestiae aliquam
             hic ad saepe cupiditate odio magnam mollitia inventore itaque,
