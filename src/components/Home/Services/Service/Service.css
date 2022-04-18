@@ -36,6 +36,15 @@
     font-weight: bold;
 }
 
+.defalut-style {
+    cursor: pointer;
+}
+
+.defalut-style:hover {
+    background-color: rgba(0, 255, 255, 0.342) !important;
+    color: #000;
+}
+
 .service-container:hover .service-img {
     transform: translateY(-100%) rotateX(90deg);
 }

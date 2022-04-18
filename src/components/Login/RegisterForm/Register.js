@@ -6,6 +6,7 @@ import auth from "../../../firebase.init";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import Loading from "../../Shared/Loading";
 import { toast } from "react-toastify";
+import SocialLogin from "../../Shared/SocialLogin";
 
 const RegisterForm = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -120,13 +121,7 @@ const RegisterForm = () => {
           )}
         </p>
 
-        {/* <Link
-          to=""
-          onClick={resetPassword}
-          className="text-danger fw-bold mt-3"
-        >
-          Forgot your password?
-        </Link> */}
+        <SocialLogin></SocialLogin>
       </div>
     </div>
   );

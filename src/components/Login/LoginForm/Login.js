@@ -9,6 +9,7 @@ import {
 import auth from "../../../firebase.init";
 import { toast } from "react-toastify";
 import Loading from "../../Shared/Loading";
+import SocialLogin from "../../Shared/SocialLogin";
 
 const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -107,7 +108,7 @@ const Login = () => {
 
             <p className="signup ">
               Don't have an account?{" "}
-              <Link to="/signup" className="text-warning">
+              <Link to="/signup" s>
                 sign up
               </Link>
             </p>
@@ -122,13 +123,7 @@ const Login = () => {
           Forgotten password?
         </Link>
 
-        {/* <Link
-          to=""
-          onClick={resetPassword}
-          className="text-danger fw-bold mt-3"
-        >
-          Forgot your password?
-        </Link> */}
+        <SocialLogin></SocialLogin>
       </div>
     </div>
   );
