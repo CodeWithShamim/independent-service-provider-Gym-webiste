@@ -1,12 +1,18 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Register.css";
 import logo from "../../../images/logo2.png";
+import auth from "../../../firebase.init";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import Loading from "../../Shared/Loading";
 
 const RegisterForm = () => {
-  const emailRef = useRef("");
-  const passwordRef = useRef("");
-  const nameRef = useRef("");
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const nameRef = useRef();
+
   // handle Registration
   const handleRegister = (e) => {
     e.preventDefault();
@@ -14,8 +20,25 @@ const RegisterForm = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     const name = nameRef.current.value;
-    console.log(email, password, name);
+
+    // console.log(email, password, name);
+    // create user with email & pass
+
+    if (name && email && password) {
+      createUserWithEmailAndPassword(email, password);
+    } else {
+      console.log("Please fiil all input field!!");
+    }
   };
+
+  // use navigate
+  const navigate = useNavigate();
+  if (user) {
+    navigate("/");
+  }
+  if (loading) {
+    return <Loading></Loading>;
+  }
   return (
     <div className="text-center main-container">
       <div
@@ -24,7 +47,7 @@ const RegisterForm = () => {
         data-aos-easing="linear"
         data-aos-duration="500"
       >
-        <img className="logo" src={logo} alt="logo" />
+        <img className="logo img-fluid" src={logo} alt="logo" />
         <br />
         <form onSubmit={handleRegister}>
           <div className=" text-start">

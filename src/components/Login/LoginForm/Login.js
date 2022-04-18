@@ -15,14 +15,14 @@ const Login = () => {
     console.log(email, password);
   };
   return (
-    <div className="text-center main-container">
+    <div className="text-center main-login-container">
       <div
         className=" w-50 mx-auto login-container"
         data-aos="fade-right"
         data-aos-easing="linear"
         data-aos-duration="500"
       >
-        <img className="logo" src={logo} alt="logo" />
+        <img className="logo img-fluid mt-4" src={logo} alt="logo" />
         <br />
         <form onSubmit={handleLogin}>
           <div className=" text-start">
