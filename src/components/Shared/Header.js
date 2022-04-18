@@ -1,9 +1,19 @@
+import { signOut } from "firebase/auth";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../firebase.init";
 // import logo from "../../images/logo2.png";
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+  // console.log(user);
+
+  // logut
+  const logOut = () => {
+    signOut(auth);
+  };
   return (
     <>
       <Navbar
@@ -48,13 +58,26 @@ const Header = () => {
               >
                 About
               </Link>
-              <Link
-                style={{ color: "#00BEF2" }}
-                className="text-decoration-none fw-bold"
-                to="/login"
-              >
-                Login
-              </Link>
+
+              {/* set dynamic taggle  */}
+              {user ? (
+                <Link
+                  style={{ color: "#00BEF2" }}
+                  className="text-decoration-none fw-bold"
+                  to=""
+                  onClick={logOut}
+                >
+                  Logout
+                </Link>
+              ) : (
+                <Link
+                  style={{ color: "#00BEF2" }}
+                  className="text-decoration-none fw-bold"
+                  to="/login"
+                >
+                  Login
+                </Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
