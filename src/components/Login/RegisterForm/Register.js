@@ -112,7 +112,7 @@ const RegisterForm = () => {
           </div>
 
           <button type="submit" className="login-btn btn w-100 fw-bold fs-4">
-            Login
+            Sign up
           </button>
         </form>
         <p>
